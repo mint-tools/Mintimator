@@ -3,6 +3,8 @@
     import {ActivityManager} from "$lib/activityManager.svelte.js";
     import { ScrollArea } from "$lib/components/ui/scroll-area";
     import AddActivityDialog from "./addActivityDialog.svelte";
+    import {Trash2} from "@lucide/svelte";
+    import {Button} from "$lib/components/ui/button";
 
     let {requirementLevel} = $props();
 
@@ -32,12 +34,18 @@
     <Card.Content>
         <ScrollArea class="h-[200px] border rounded-lg p-2">
             <!--TODO: Add mint ec wettbewerbe to activity list-->
-            {#each activityManager.activities as activity}
-                <div class="rounded-lg border my-2 p-4 flex items-center justify-between">
+            {#each activityManager.activities as activity, i}
+                <div class="rounded-lg border my-2 p-4 flex items-center justify-between group relative">
                     <div>
                         <div class="text-sm font-medium">{activity.name}</div>
                     </div>
-                    <div class="text-base font-semibold">{activity.points} P</div>
+                    <div class="text-base font-semibold mr-10">{activity.points} P</div>
+                    <Button variant="ghost" class="group-hover:visible not-group-hover:hidden absolute right-2 top-2.5" onclick={() => {
+                        activityManager.removeActivity(i);
+                    }}>
+                        <Trash2 class="size-4"/>
+                    </Button>
+
                 </div>
             {/each}
         </ScrollArea>
