@@ -136,5 +136,224 @@
       "niveau2": true,
       "niveau3": true
     }
+  ],
+  "competitions": [
+    {
+      "name": "Breitenwettbewerbe",
+      "label": "Breitenwettbewerbe",
+      "note": "z.B. Känguru der Mathematik, Informatik Biber",
+      "niveau1": true,
+      "niveau2": true,
+      "niveau3": false
+    },
+    {
+      "name": "Bundeswettbewerbe oder ausgewiesene Oberstufenwettbewerbe",
+      "label": "Bundes/-Oberstufenwettbewerbe",
+      "note": "",
+      "niveau1": true,
+      "niveau2": true,
+      "niveau3": true
+    },
+    {
+      "name": "BundesUmwelt-Wettbewerb",
+      "label": "BundesUmwelt-Wettbewerb",
+      "note": "",
+      "niveau1": true,
+      "niveau2": true,
+      "niveau3": true
+    },
+    {
+      "name": "Bundeswettbewerb Informatik",
+      "label": "Bundeswettbewerb Informatik",
+      "note": "",
+      "niveau1": true,
+      "niveau2": true,
+      "niveau3": true
+    },
+    {
+      "name": "Bundeswettbewerb Mathematik",
+      "label": "Bundeswettbewerb Mathematik",
+      "note": "",
+      "niveau1": true,
+      "niveau2": true,
+      "niveau3": true
+    },
+    {
+      "name": "CanSat",
+      "label": "CanSat",
+      "note": "",
+      "niveau1": false,
+      "niveau2": true,
+      "niveau3": true
+    },
+    {
+      "name": "Cypher Challenge",
+      "label": "Cypher Challenge",
+      "note": "",
+      "niveau1": true,
+      "niveau2": true,
+      "niveau3": false
+    },
+    {
+      "name": "DECHEMAX",
+      "label": "DECHEMAX",
+      "note": "",
+      "niveau1": true,
+      "niveau2": true,
+      "niveau3": true
+    },
+    {
+      "name": "Dr. Hans-Riegel-Fachpreis",
+      "label": "Dr. Hans-Riegel-Fachpreis",
+      "note": "",
+      "niveau1": false,
+      "niveau2": false,
+      "niveau3": true
+    },
+    {
+      "name": "FIRST® LEGO® League",
+      "label": "FIRST® LEGO® League",
+      "note": "",
+      "niveau1": true,
+      "niveau2": true,
+      "niveau3": true
+    },
+    {
+      "name": "Formel 1 in der Schule",
+      "label": "Formel 1",
+      "note": "",
+      "niveau1": true,
+      "niveau2": true,
+      "niveau3": true
+    },
+    {
+      "name": "Heureka",
+      "label": "Heureka",
+      "note": "",
+      "niveau1": true,
+      "niveau2": true,
+      "niveau3": true
+    },
+    {
+      "name": "Internationale Junior Science Olympiade",
+      "label": "Junior Science Olympiade",
+      "note": "",
+      "niveau1": true,
+      "niveau2": true,
+      "niveau3": true
+    },
+    {
+      "name": "Internationale Biologie-, Chemie-, PhysikOlympiade",
+      "label": "Biologie-, Chemie-, PhysikOlympiade",
+      "note": "",
+      "niveau1": true,
+      "niveau2": true,
+      "niveau3": true
+    },
+    {
+      "name": "International. Chemiewettbewerb ICQ (RACI)",
+      "label": "Chemiewettbewerb ICQ",
+      "note": "",
+      "niveau1": true,
+      "niveau2": true,
+      "niveau3": true
+    },
+    {
+      "name": "Jugend präsentiert",
+      "label": "Jugend präsentiert",
+      "note": "",
+      "niveau1": true,
+      "niveau2": true,
+      "niveau3": false
+    },
+    {
+      "name": "Jugendwettbewerb Informatik",
+      "label": "Jugendwettbewerb Informatik",
+      "note": "",
+      "niveau1": true,
+      "niveau2": true,
+      "niveau3": true
+    },
+    {
+      "name": "Mathe / Physik / Krypto im Advent",
+      "label": "Krypto im Advent",
+      "note": "",
+      "niveau1": true,
+      "niveau2": false,
+      "niveau3": false
+    },
+    {
+      "name": "Mathematik-Olympiade",
+      "label": "Mathematik-Olympiade",
+      "note": "",
+      "niveau1": true,
+      "niveau2": true,
+      "niveau3": true
+    },
+    {
+      "name": "MATH+ Adventskalender",
+      "label": "MATH+ Adventskalender",
+      "note": "",
+      "niveau1": true,
+      "niveau2": false,
+      "niveau3": false
+    },
+    {
+      "name": "MINT-EC-SchoolSam",
+      "label": "MINT-EC-SchoolSam",
+      "note": "",
+      "niveau1": true,
+      "niveau2": true,
+      "niveau3": false
+    },
+    {
+      "name": "MNU-Bundeswettbewerb Physik",
+      "label": "MNU-Bundeswettbewerb Physik",
+      "note": "",
+      "niveau1": true,
+      "niveau2": true,
+      "niveau3": false
+    },
+    {
+      "name": "Pangea",
+      "label": "Pangea",
+      "note": "",
+      "niveau1": true,
+      "niveau2": true,
+      "niveau3": false
+    },
+    {
+      "name": "RoboCup",
+      "label": "RoboCup",
+      "note": "",
+      "niveau1": true,
+      "niveau2": true,
+      "niveau3": true
+    },
+    {
+      "name": "Jugend forscht / Jugend forscht Junior",
+      "label": "Jugend forscht",
+      "note": "",
+      "niveau1": true,
+      "niveau2": true,
+      "niveau3": true
+    },
+    {
+      "name": "World Robot Olympiad",
+      "label": "World Robot Olympiad",
+      "note": "",
+      "niveau1": true,
+      "niveau2": true,
+      "niveau3": true
+    },
+    {
+      "name": "Explore Science vor Formel1 in der Schule",
+      "label": "Explore Science",
+      "note": "",
+      "niveau1": true,
+      "niveau2": true,
+      "niveau3": false
+    }
+
   ]
 }

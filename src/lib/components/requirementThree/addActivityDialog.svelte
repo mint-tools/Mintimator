@@ -10,9 +10,12 @@
 
     let {activityManager}: {activityManager: ActivityManager} = $props();
 
-    let activitySelection: string = $state("0");
+    let activitySelection: string = $state("activities/0");
+    let index: number = $state(0);
     let niveau: string = $state("");
     let open = $state(false);
+
+    let category = $state(activities.activities);
 
 </script>
 
@@ -27,18 +30,31 @@
             </Dialog.Description>
         </Dialog.Header>
         <Select.Root type="single" bind:value={activitySelection} onValueChange={() => {
+            // Achtung: Schwarze Magie
+            let split = activitySelection.split("/");
+            split[0] === "competitions" ? category = activities.competitions : category = activities.activities;
+            index = Number(split[1]);
             niveau = "";
         }}>
             <Select.Trigger class="w-full justify-between">
-                <span class="truncate">{activities.activities[Number(activitySelection)]?.label}</span>
+                <span class="truncate">{category[index]?.label}</span>
             </Select.Trigger>
             <Select.Content class="max-w-md lg:max-w-lg whitespace-normal max-h-80">
                 <Select.Group>
                     <Select.Label>Aktivitäten</Select.Label>
                     {#each activities.activities as activity, i}
-                        <Select.Item value={String(i)} label={activity.label} class="p-2 flex items-start">
+                        <Select.Item value={"activities/" + String(i)} label={activity.label} class="p-2 flex items-start">
                             <span class="min-w-0 flex-1 whitespace-normal break-words">
                                 {activity.name}
+                            </span>
+                        </Select.Item>
+                    {/each}
+                    <Select.Separator />
+                    <Select.Label>Wettbewerbe</Select.Label>
+                    {#each activities.competitions as competition, i}
+                        <Select.Item value={"competitions/" + String(i)} label={competition.label} class="p-2 flex items-start">
+                            <span class="min-w-0 flex-1 whitespace-normal break-words">
+                                {competition.name}
                             </span>
                         </Select.Item>
                     {/each}
@@ -48,23 +64,23 @@
         <div class="border rounded-lg p-4">
             <RadioGroup.Root bind:value={niveau}>
                 <div class="flex items-center space-x-2">
-                    <RadioGroup.Item value="1" id="niveau1" disabled={!activities.activities[Number(activitySelection)]?.niveau1}></RadioGroup.Item>
-                    <Label class={!activities.activities[Number(activitySelection)]?.niveau1 ? "text-muted-foreground": ""} for="niveau1">Niveau 1</Label>
+                    <RadioGroup.Item value="1" id="niveau1" disabled={!category[index]?.niveau1}></RadioGroup.Item>
+                    <Label class={!category[index]?.niveau1 ? "text-muted-foreground": ""} for="niveau1">Niveau 1</Label>
                 </div>
                 <div class="flex items-center space-x-2">
-                    <RadioGroup.Item value="2" id="niveau2" disabled={!activities.activities[Number(activitySelection)]?.niveau2}></RadioGroup.Item>
-                    <Label class={!activities.activities[Number(activitySelection)]?.niveau2 ? "text-muted-foreground": ""} for="niveau2">Niveau 2</Label>
+                    <RadioGroup.Item value="2" id="niveau2" disabled={!category[index]?.niveau2}></RadioGroup.Item>
+                    <Label class={!category[index]?.niveau2 ? "text-muted-foreground": ""} for="niveau2">Niveau 2</Label>
                 </div>
                 <div class="flex items-center space-x-2">
-                    <RadioGroup.Item value="3" id="niveau3" disabled={!activities.activities[Number(activitySelection)]?.niveau3}></RadioGroup.Item>
-                    <Label class={!activities.activities[Number(activitySelection)]?.niveau3 ? "text-muted-foreground": ""} for="niveau3">Niveau 3</Label>
+                    <RadioGroup.Item value="3" id="niveau3" disabled={!category[index]?.niveau3}></RadioGroup.Item>
+                    <Label class={!category[index]?.niveau3 ? "text-muted-foreground": ""} for="niveau3">Niveau 3</Label>
                 </div>
             </RadioGroup.Root>
         </div>
         <Dialog.Footer>
             <Button type="submit" onclick={() => {
-                            if(niveau === "" || activitySelection === "" || Number(activitySelection) < 0) return;
-                            activityManager.addActivity(new Activity(activities.activities[Number(activitySelection)]?.label, Number(niveau)*5));
+                            if(niveau === "" || Number(index) < 0) return;
+                            activityManager.addActivity(new Activity(category[index]?.label, Number(niveau)*5));
                             open = !open;
                         }}>Hinzufügen</Button>
         </Dialog.Footer>
