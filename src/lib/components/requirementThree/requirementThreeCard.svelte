@@ -1,22 +1,21 @@
 <script lang="ts">
     import * as Card from "$lib/components/ui/card";
-    import {ActivityManager} from "$lib/activityManager.svelte.js";
+    import {ActivityManager} from "$lib/requirementThree/activityManager.svelte.js";
     import { ScrollArea } from "$lib/components/ui/scroll-area";
-    import AddActivityDialog from "./addActivityDialog.svelte";
+    import AddActivityDialog from "$lib/components/requirementThree/addActivityDialog.svelte";
     import {Trash2} from "@lucide/svelte";
     import {Button} from "$lib/components/ui/button";
+    import {activityManagerLevel1, activityManagerLevel2} from "$lib/requirementData.svelte";
+    import {browser} from "$app/environment";
 
     let {requirementLevel} = $props();
 
-    let activityManager: ActivityManager = new ActivityManager();
-
-
-    function calculatePoints() {
-        let sum: number = 0;
-        for (const activity of activityManager.activities) {
-            sum += activity.points;
-        }
-        return sum;
+    let activityManager: any = $state();
+    if(requirementLevel == 1) activityManager = activityManagerLevel1;
+    else if(requirementLevel == 2) activityManager = activityManagerLevel2
+    else if(browser){
+        console.log("Error: Requirement level not found");
+        location.reload();
     }
 </script>
 
@@ -51,14 +50,13 @@
         </ScrollArea>
     </Card.Content>
     <Card.Footer>
-        <div class="grid grid-cols-2 gap-20">
+        <div class="flex justify-between items-center w-full px-5">
             <AddActivityDialog activityManager={activityManager}/>
             <div class="rounded-lg border p-4">
                 <div class="text-xs text-muted-foreground">Gesamtpunkte</div>
-                <!--TODO: Overwork for more flexibility-->
                 {#key activityManager.activities.length}
                     <div class="text-2xl font-semibold">
-                        {calculatePoints()}
+                        {activityManager.totalPoints} P
                     </div>
                 {/key}
             </div>

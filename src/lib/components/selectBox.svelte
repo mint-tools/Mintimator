@@ -16,9 +16,9 @@
             <Select.Content>
                 <Select.Group>
                     <Select.Label>Fächerbelegung</Select.Label>
-                    {#each list as option (option.value)}
-                        <Select.Item value={option.value} label={option.label}>
-                            {option.label}
+                    {#each list as option}
+                        <Select.Item value={option.label} label={option.label}>
+                            {option.name}
                         </Select.Item>
                     {/each}
                 </Select.Group>

@@ -1,11 +1,11 @@
 <script lang="ts">
     import {Button} from "$lib/components/ui/button/index.js";
     import * as Card from "$lib/components/ui/card";
+    import {calculateCertificate} from "$lib/certificateCalculator";
 
-    
-
+    let resultText: string = $state("");
     function calculate() {
-
+        resultText = calculateCertificate();
     }
 </script>
 <div class="lg:grid-cols-2 w-full">
@@ -17,8 +17,12 @@
             </div>
 
         </Card.Header>
-        <Card.Content class="text-muted-foreground text-sm">
-            <!--TODO: Put result here-->
+        <Card.Content class="">
+            <div class="flex p-5 border rounded-lg items-center justify-center">
+                <span class="font-semibold text-md">
+                    {resultText}
+                </span>
+            </div>
         </Card.Content>
     </Card.Root>
 </div>

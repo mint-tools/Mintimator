@@ -1,12 +1,12 @@
 <script lang="ts">
     import activities from "$lib/assets/activities.json";
-    import {Activity} from "$lib/activity.js";
+    import {Activity} from "$lib/requirementThree/activity.js";
     import {Button} from "$lib/components/ui/button/index.js";
     import * as Dialog from "$lib/components/ui/dialog";
     import * as Select from "$lib/components/ui/select";
     import * as RadioGroup from "$lib/components/ui/radio-group/index.js";
     import { Label } from "$lib/components/ui/label/index.js";
-    import {ActivityManager} from "$lib/activityManager.svelte.js";
+    import {ActivityManager} from "$lib/requirementThree/activityManager.svelte.js";
 
     let {activityManager}: {activityManager: ActivityManager} = $props();
 
@@ -79,6 +79,7 @@
         </div>
         <Dialog.Footer>
             <Button type="submit" onclick={() => {
+                // TODO: Dont let user add activities which are already added + make it visible in ui with disabled item
                             if(niveau === "" || Number(index) < 0) return;
                             activityManager.addActivity(new Activity(category[index]?.label, Number(niveau)*5));
                             open = !open;
