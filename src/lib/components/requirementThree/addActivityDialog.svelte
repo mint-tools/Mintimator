@@ -5,10 +5,10 @@
     import * as Dialog from "$lib/components/ui/dialog";
     import * as Select from "$lib/components/ui/select";
     import * as RadioGroup from "$lib/components/ui/radio-group/index.js";
-    import { Label } from "$lib/components/ui/label/index.js";
+    import {Label} from "$lib/components/ui/label/index.js";
     import {ActivityManager} from "$lib/requirementThree/activityManager.svelte.js";
 
-    let {activityManager}: {activityManager: ActivityManager} = $props();
+    let {activityManager}: { activityManager: ActivityManager } = $props();
 
     let activitySelection: string = $state("activities/0");
     let index: number = $state(0);
@@ -43,16 +43,18 @@
                 <Select.Group>
                     <Select.Label>Aktivitäten</Select.Label>
                     {#each activities.activities as activity, i}
-                        <Select.Item value={"activities/" + String(i)} label={activity.label} class="p-2 flex items-start">
+                        <Select.Item disabled={activityManager.hasActivity(new Activity(activity.label, Number(niveau)*5))} value={"activities/" + String(i)} label={activity.label}
+                                     class="p-2 flex items-start">
                             <span class="min-w-0 flex-1 whitespace-normal break-words">
                                 {activity.name}
                             </span>
                         </Select.Item>
                     {/each}
-                    <Select.Separator />
+                    <Select.Separator/>
                     <Select.Label>Wettbewerbe</Select.Label>
                     {#each activities.competitions as competition, i}
-                        <Select.Item value={"competitions/" + String(i)} label={competition.label} class="p-2 flex items-start">
+                        <Select.Item value={"competitions/" + String(i)} label={competition.label}
+                                     class="p-2 flex items-start">
                             <span class="min-w-0 flex-1 whitespace-normal break-words">
                                 {competition.name}
                             </span>
@@ -65,25 +67,31 @@
             <RadioGroup.Root bind:value={niveau}>
                 <div class="flex items-center space-x-2">
                     <RadioGroup.Item value="1" id="niveau1" disabled={!category[index]?.niveau1}></RadioGroup.Item>
-                    <Label class={!category[index]?.niveau1 ? "text-muted-foreground": ""} for="niveau1">Niveau 1</Label>
+                    <Label class={!category[index]?.niveau1 ? "text-muted-foreground": ""} for="niveau1">Niveau
+                        1</Label>
                 </div>
                 <div class="flex items-center space-x-2">
                     <RadioGroup.Item value="2" id="niveau2" disabled={!category[index]?.niveau2}></RadioGroup.Item>
-                    <Label class={!category[index]?.niveau2 ? "text-muted-foreground": ""} for="niveau2">Niveau 2</Label>
+                    <Label class={!category[index]?.niveau2 ? "text-muted-foreground": ""} for="niveau2">Niveau
+                        2</Label>
                 </div>
                 <div class="flex items-center space-x-2">
                     <RadioGroup.Item value="3" id="niveau3" disabled={!category[index]?.niveau3}></RadioGroup.Item>
-                    <Label class={!category[index]?.niveau3 ? "text-muted-foreground": ""} for="niveau3">Niveau 3</Label>
+                    <Label class={!category[index]?.niveau3 ? "text-muted-foreground": ""} for="niveau3">Niveau
+                        3</Label>
                 </div>
             </RadioGroup.Root>
         </div>
         <Dialog.Footer>
             <Button type="submit" onclick={() => {
-                // TODO: Dont let user add activities which are already added + make it visible in ui with disabled item
-                            if(niveau === "" || Number(index) < 0) return;
-                            activityManager.addActivity(new Activity(category[index]?.label, Number(niveau)*5));
-                            open = !open;
-                        }}>Hinzufügen</Button>
+                    let activity = new Activity(category[index]?.label, Number(niveau)*5);
+                    if (activityManager.hasActivity(activity)) return;
+                    if(niveau === "" || Number(index) < 0) return;
+                    activityManager.addActivity(activity);
+                    open = !open;
+                }
+            }>Hinzufügen
+            </Button>
         </Dialog.Footer>
     </Dialog.Content>
 </Dialog.Root>

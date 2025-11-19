@@ -14,4 +14,7 @@ export class ActivityManager {
     public getActivities(): Activity[] {
         return this.activities;
     }
+    public hasActivity(activity: Activity): boolean {
+        return this.activities.some(a => a.name === activity.name);
+    }
 }
