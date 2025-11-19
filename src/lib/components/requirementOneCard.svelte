@@ -8,7 +8,7 @@
 </script>
 
 <Card.Root class="overflow-hidden rounded-xl border shadow-sm">
-    <Card.Header class="border-b ">
+    <Card.Header class="border-b">
         <Card.Title class="text-base md:text-lg">Anforderungsfeld 1</Card.Title>
         <Card.Description>Fächerbelegung in der Q-Phase</Card.Description>
     </Card.Header>

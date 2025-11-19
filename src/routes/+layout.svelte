@@ -11,5 +11,5 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<!--<ModeWatcher />-->
+<ModeWatcher defaultMode={"light"}/>
 {@render children?.()}

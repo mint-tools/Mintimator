@@ -1,8 +1,13 @@
 <script lang="ts">
+    import * as DropdownMenu from "$lib/components/ui/dropdown-menu/index.js";
     import RequirementOneCard from "$lib/components/requirementOneCard.svelte";
     import RequirementThreeCard from "$lib/components/requirementThree/requirementThreeCard.svelte";
     import RequirementTwoCard from "$lib/components/requirementTwoCard.svelte";
     import ResultCard from "$lib/components/resultCard.svelte";
+    import {resetMode, setMode} from "mode-watcher";
+    import SunIcon from "@lucide/svelte/icons/sun";
+    import MoonIcon from "@lucide/svelte/icons/moon";
+    import { buttonVariants } from "$lib/components/ui/button/index.js";
 </script>
 
 <div class="min-h-dvh bg-background text-foreground">
@@ -29,6 +34,25 @@
     <footer class="border-t">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between text-xs text-muted-foreground">
             <span>© 2025 MINT-EC Rechner</span>
+            <DropdownMenu.Root>
+                <DropdownMenu.Trigger
+                        class={buttonVariants({ variant: "outline", size: "icon" })}
+                >
+                    <SunIcon
+                            class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 !transition-all dark:-rotate-90 dark:scale-0"
+                    />
+                    <MoonIcon
+                            class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 !transition-all dark:rotate-0 dark:scale-100"
+                    />
+                    <span class="sr-only">Toggle theme</span>
+                </DropdownMenu.Trigger>
+                <DropdownMenu.Content align="end">
+                    <DropdownMenu.Item onclick={() => setMode("light")}>Light</DropdownMenu.Item
+                    >
+                    <DropdownMenu.Item onclick={() => setMode("dark")}>Dark</DropdownMenu.Item>
+                    <DropdownMenu.Item onclick={() => resetMode()}>System</DropdownMenu.Item>
+                </DropdownMenu.Content>
+            </DropdownMenu.Root>
         </div>
     </footer>
 </div>
