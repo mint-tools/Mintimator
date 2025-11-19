@@ -1,26 +1,22 @@
 <script lang="ts">
-    import {Button} from "$lib/components/ui/button/index.js";
     import * as Card from "$lib/components/ui/card";
     import {calculateCertificate} from "$lib/certificateCalculator";
-
-    let resultText: string = $state("");
-    function calculate() {
-        resultText = calculateCertificate();
-    }
+    import * as Data from "$lib/requirementData.svelte";
 </script>
 <div class="lg:grid-cols-2 w-full">
     <Card.Root class="overflow-hidden rounded-xl border shadow-sm">
         <Card.Header class="border-b">
             <div class="flex items-center justify-between space-y-1.5">
                 <Card.Title class="text-base md:text-lg">Zertifikatsergebnis</Card.Title>
-                <Button onclick={() => calculate()}>Berechnen</Button>
             </div>
 
         </Card.Header>
         <Card.Content class="">
             <div class="flex p-5 border rounded-lg items-center justify-center">
                 <span class="font-semibold text-md">
-                    {resultText}
+                    {#key Data.requirementOneData.averageNote || Data.requirementOneData.averageNote || Data.requirementTwoData.scientificNote || Data.activityManagerLevel1.activities.length || Data.activityManagerLevel2.activities.length}
+                        {calculateCertificate()}
+                    {/key}
                 </span>
             </div>
         </Card.Content>
