@@ -29,7 +29,7 @@ html {
     --muted: oklch(0.96 0.03 224);
     --muted-foreground: oklch(0.4 0.03 260);
 
-    --accent: oklch(0.72 0.17 224);
+    --accent: oklch(0.74 0.14 220);
     --accent-foreground: oklch(0.985 0 0);
 
     --destructive: oklch(0.57 0.24 27);
@@ -102,7 +102,7 @@ html {
     --radius-md: calc(var(--radius) - 2px);
     --radius-lg: var(--radius);
     --radius-xl: calc(var(--radius) + 4px);
-    
+
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --color-card: var(--card);
