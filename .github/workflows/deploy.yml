@@ -1,8 +1,9 @@
-name: deploy.yml
+name: Deploy
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -11,48 +12,50 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: pages
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: 'npm'
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-        with:
-          static_site_generator: sveltekit
-
       - name: Build
-        run: npm run build
+        env:
+          BASE_PATH: /${{ github.event.repository.name }}
+          PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+        run: |
+          if [[ "${{ github.repository_owner }}" == "${{ github.event.repository.name }}" ]]; then
+            echo "PUBLIC_BASE_PATH=" >> $GITHUB_ENV
+          else
+            echo "PUBLIC_BASE_PATH=${PUBLIC_BASE_PATH}" >> $GITHUB_ENV
+          fi
+          npm run build
 
-      - name: Upload Artifacts
-        uses: actions/upload-pages-artifact@v1
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: 'build/'
+          # Standard-Ausgabeverzeichnis für adapter-static ist "build"
+          path: build
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
-
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
