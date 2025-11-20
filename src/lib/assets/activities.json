@@ -4,137 +4,205 @@
       "name": "MINT-EC-Camp/Ferienakademie/Forschungsexpedition/Workshop",
       "label": "MINT-EC-Camp/Workshop",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": true
+      "niveau3": true,
+      "description1": "2 Tage",
+      "description2": "≥ 3 Tage",
+      "description3": "≥ 7 Tage"
     },
     {
       "name": "MINT-EC-Regionalforum",
       "label": "MINT-EC-Regionalforum",
       "note": "eintägig mindestens 6 Stunden exkl. Pausen",
+      "multipleParticipation": true,
       "niveau1": true,
       "niveau2": false,
-      "niveau3": false
+      "niveau3": false,
+      "description1": "5 Punkte pro Teilnahme",
+      "description2": "",
+      "description3": ""
     },
     {
       "name": "Digital Insights.",
       "label": "Digital Insights.",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": false,
-      "niveau3": false
+      "niveau3": false,
+      "description1": "Präsenzveranstaltung oder 4 x virtuelle Teilnahme",
+      "description2": "",
+      "description3": ""
     },
     {
       "name": "MINT-ECho",
       "label": "MINT-ECho",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": false,
-      "niveau3": true
+      "niveau3": true,
+      "description1": "Wenn bereits veröffentlicht, z.B. als Facharbeit durch Dr. Hans Riegel-Stiftung, da Anpassung an zweiseitiges Format erforderlich.",
+      "description2": "",
+      "description3": "MINT-ECho-Veröffentlichung(ohne vorherige Publizierung)"
     },
     {
       "name": "MINT-EC-Regionalforum,-Zukunftsforum,-Hauptstadtforum",
       "label": "MINT-EC-Forum",
       "note": "",
+      "multipleParticipation": true,
       "niveau1": true,
       "niveau2": false,
-      "niveau3": false
+      "niveau3": false,
+      "description1": "5 Punkte pro Teilnahme",
+      "description2": "",
+      "description3": ""
     },
     {
       "name": "Cyber Mentor",
       "label": "Cyber Mentor",
       "note": "",
+      "multipleParticipation": true,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": false
+      "niveau3": false,
+      "description1": "ernsthafte Teilnahme / regelmäßige Kommunikation, 5 Punkte pro Jahr, insgesamt max. 15Punkte",
+      "description2": "eigenständige Leistung, z.B. Bearbeitung eines Wiki-Artikels, CyberNews-Artikels",
+      "description3": ""
     },
     {
       "name": "Deutsche Schüler Akademie",
       "label": "Deutsche Schüler Akademie",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": false,
       "niveau2": false,
-      "niveau3": true
+      "niveau3": true,
+      "description1": "",
+      "description2": "",
+      "description3": "ernsthafte Teilnahme"
     },
     {
       "name": "MINT-Mentorentätigkeit",
       "label": "MINT-Mentorentätigkeit",
       "note": "mind. 20 h pro Schuljahr, Gesamtleistung muss in Sek. II erbracht worden sein",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": true
+      "niveau3": true,
+      "description1": "1 Jahr",
+      "description2": "2 Jahre",
+      "description3": "3 Jahre"
     },
     {
       "name": "MINT-AG/-Wahlunterricht, -Wahlkurs",
       "label": "MINT-AG",
       "note": "freiwillig",
+      "multipleParticipation": true,
       "niveau1": true,
       "niveau2": false,
-      "niveau3": false
+      "niveau3": false,
+      "description1": "5 Punkte pro Jahreswochenstunde, insgesamt max. 15 Punkte in der Sek. I und max. 15 Punkte in der Sek. II",
+      "description2": "",
+      "description3": ""
     },
     {
       "name": "MINT-Profilklasse",
       "label": "MINT-Profilklasse",
       "note": "",
+      "multipleParticipation": true,
       "niveau1": true,
       "niveau2": false,
-      "niveau3": false
+      "niveau3": false,
+      "description1": "max. 3 x 5 Punkte, darunter 1 x 5 Punkte in Sek. II",
+      "description2": "",
+      "description3": ""
     },
     {
       "name": "Öffentliche MINT-Vorträge halten",
       "label": "MINT-Vorträge",
       "note": "außerunterrichtlich und max. 2 anrechenbar",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": false,
-      "niveau3": false
+      "niveau3": false,
+      "description1": "gute Leistung",
+      "description2": "",
+      "description3": ""
     },
     {
       "name": "Schüler-Ingenieur-Akademie",
       "label": "Ingenieur-Akademie",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": false,
       "niveau2": false,
-      "niveau3": true
+      "niveau3": true,
+      "description1": "",
+      "description2": "",
+      "description3": "15 Punkte bei erfolgreicher Teilnahme"
     },
     {
       "name": "Universität/Hochschule",
       "label": "Universität/Hochschule",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": true
+      "niveau3": true,
+      "description1": "Schnupperstudium",
+      "description2": "Probestudium",
+      "description3": "Probestudium mit Leistungsnachweis"
     },
     {
       "name": "freiwilliges Ferien- oder Wochenpraktikum mit eindeutigem MINT-Bezug",
       "label": "freiwilliges Praktikum",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": false
+      "niveau3": false,
+      "description1": "≥ 5 Tage",
+      "description2": "≥ 10 Tage",
+      "description3": ""
     },
     {
       "name": "Verpflichtendes Berufspraktikum mit eindeutigem MINT-Bezug",
       "label": "Verpflichtendes Praktikum",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": false,
-      "niveau3": false
+      "niveau3": false,
+      "description1": "≥ 5 Tage (nur einmal werten)",
+      "description2": "",
+      "description3": ""
     },
     {
       "name": "Fachwissenschaftliche Arbeit mit mindestens 10 Seiten oder Besondere Lernleistung",
       "label": "Fachwissenschaftliche Arbeit",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": true
+      "niveau3": true,
+      "description1": "≥ 09 Notenpunkte",
+      "description2": "≥ 11 Notenpunkte",
+      "description3": "≥ 13 Notenpunkte"
     },
     {
       "name": "Wissenschaftspropädeutisches Fach oder zusätzlicher MINT-Kurs durchgängig in der Qualifikationsphase belegt",
       "label": "Zusätzlicher MINT-Kurs",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": true
+      "niveau3": true,
+      "description1": "Mittelwert aller Kurshalbjahre ≥ 09 Notenpunkte",
+      "description2": "Mittelwert aller Kurshalbjahre ≥ Notenpunkte",
+      "description3": "Mittelwert aller Kurshalbjahre ≥ 13 Notenpunkte"
     }
   ],
   "competitions": [
@@ -142,217 +210,325 @@
       "name": "Breitenwettbewerbe",
       "label": "Breitenwettbewerbe",
       "note": "z.B. Känguru der Mathematik, Informatik Biber",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": false
+      "niveau3": false,
+      "description1": "3. Preis oder 3 x ernsthafte Teilnahme",
+      "description2": "1. oder 2. Preis",
+      "description3": ""
     },
     {
       "name": "Bundeswettbewerbe oder ausgewiesene Oberstufenwettbewerbe",
       "label": "Bundes/-Oberstufenwettbewerbe",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": true
+      "niveau3": true,
+      "description1": "ernsthafte Teilnahme 1. Runde",
+      "description2": "Qualifikation 2. Runde",
+      "description3": "ernsthafte Teilnahme 3. Runde"
     },
     {
       "name": "BundesUmwelt-Wettbewerb",
       "label": "BundesUmwelt-Wettbewerb",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": true
+      "niveau3": true,
+      "description1": "Urkunde",
+      "description2": "Förder- oder Anerkennungspreis",
+      "description3": "Haupt- oder Sonderpreis"
     },
     {
       "name": "Bundeswettbewerb Informatik",
       "label": "Bundeswettbewerb Informatik",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": true
+      "niveau3": true,
+      "description1": "ernsthafte Teilnahme",
+      "description2": "Qualifikation 2. Runde",
+      "description3": "Qualifikation 3. Runde"
     },
     {
       "name": "Bundeswettbewerb Mathematik",
       "label": "Bundeswettbewerb Mathematik",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": true
+      "niveau3": true,
+      "description1": "ernsthafte Teilnahme 1. Runde",
+      "description2": "Qualifikation 2. Runde",
+      "description3": "Qualifikation 3. Runde"
     },
     {
       "name": "CanSat",
       "label": "CanSat",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": false,
       "niveau2": true,
-      "niveau3": true
+      "niveau3": true,
+      "description1": "",
+      "description2": "engagierte und vollständige Teilnahme",
+      "description3": "Preisträger*in"
     },
     {
       "name": "Cypher Challenge",
       "label": "Cypher Challenge",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": false
+      "niveau3": false,
+      "description1": "ernsthafte Teilnahme",
+      "description2": "Preisträger*in oder Höchstpunktzahl",
+      "description3": ""
     },
     {
       "name": "DECHEMAX",
       "label": "DECHEMAX",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": true
+      "niveau3": true,
+      "description1": "Qualifikation 2. Runde",
+      "description2": "Sonderpreis / bestes Klassenstufenteam",
+      "description3": "Siegerteam"
     },
     {
       "name": "Dr. Hans-Riegel-Fachpreis",
       "label": "Dr. Hans-Riegel-Fachpreis",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": false,
       "niveau2": false,
-      "niveau3": true
+      "niveau3": true,
+      "description1": "",
+      "description2": "",
+      "description3": "Preisträger*in"
     },
     {
       "name": "FIRST® LEGO® League",
       "label": "FIRST® LEGO® League",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": true
+      "niveau3": true,
+      "description1": "ernsthafte Teilnahme Regionalwettbewerb",
+      "description2": "Preisträger*in Regionalwettbewerb",
+      "description3": "Qualifikation Semi-Finals / Finale Zentraleuropa"
     },
     {
       "name": "Formel 1 in der Schule",
       "label": "Formel 1",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": true
+      "niveau3": true,
+      "description1": "ernsthafte Teilnahme Landesmeisterschaft",
+      "description2": "Preisträger*in Landesmeisterschaft",
+      "description3": "Qualifikation Deutschlandfinale"
     },
     {
       "name": "Heureka",
       "label": "Heureka",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": true
+      "niveau3": true,
+      "description1": "ernsthafte Teilnahme Landesmeisterschaft",
+      "description2": "Preisträger*in Landesmeisterschaft",
+      "description3": "Qualifikation Deutschlandfinale"
     },
     {
       "name": "Internationale Junior Science Olympiade",
       "label": "Junior Science Olympiade",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": true
+      "niveau3": true,
+      "description1": "ernsthafte Teilnahme",
+      "description2": "Teilnahme am Quiz",
+      "description3": "Qualifikation 3. Runde"
     },
     {
       "name": "Internationale Biologie-, Chemie-, PhysikOlympiade",
       "label": "Biologie-, Chemie-, PhysikOlympiade",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": true
+      "niveau3": true,
+      "description1": "ernsthafte Teilnahme",
+      "description2": "Qualifikation 2. Runde",
+      "description3": "Qualifikation 3. Runde"
     },
     {
       "name": "International. Chemiewettbewerb ICQ (RACI)",
       "label": "Chemiewettbewerb ICQ",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": true
+      "niveau3": true,
+      "description1": "ernsthafte Teilnahme (nur einmal werten)",
+      "description2": "Certificate of High Distinction",
+      "description3": "Certificate of Excellence"
     },
     {
       "name": "Jugend präsentiert",
       "label": "Jugend präsentiert",
       "note": "",
+      "multipleParticipation": true,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": false
+      "niveau3": false,
+      "description1": "3 x ernsthafte Teilnahme",
+      "description2": "Teilnahme an Qualifikationsrunde oder Präsentationsakademie",
+      "description3": ""
     },
     {
       "name": "Jugendwettbewerb Informatik",
       "label": "Jugendwettbewerb Informatik",
       "note": "",
+      "multipleParticipation": true,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": true
+      "niveau3": true,
+      "description1": "3 x ernsthafte Teilnahme an den beiden ersten oder Qualifikation für die 3. Runde",
+      "description2": "ernsthafte Teilnahme an der 3. Runde",
+      "description3": "Preis in der 3. Runde"
     },
     {
       "name": "Mathe / Physik / Krypto im Advent",
       "label": "Krypto im Advent",
       "note": "",
+      "multipleParticipation": true,
       "niveau1": true,
       "niveau2": false,
-      "niveau3": false
+      "niveau3": false,
+      "description1": "≥ 21 korrekte Antworten (max. Teilnahmen, nur Sek. I)",
+      "description2": "",
+      "description3": ""
     },
     {
       "name": "Mathematik-Olympiade",
       "label": "Mathematik-Olympiade",
       "note": "",
+      "multipleParticipation": true,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": true
+      "niveau3": true,
+      "description1": "3 x ernsthafte Teilnahme Schulrunde oder Qualifikation für die Regionalrunde (Stadt/Kreis) einmalig 5 Punkte",
+      "description2": "3 x ernsthafte Teilnahme Regionalrunde oder Preisträger*in Regionalrunde, falls diese schulübergreifend festgelegt werden oder Qualifikation Landesrunde",
+      "description3": "Preisträger*in Landesrunde oder Qualifikation Bundesrunde"
     },
     {
       "name": "MATH+ Adventskalender",
       "label": "MATH+ Adventskalender",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": false,
-      "niveau3": false
+      "niveau3": false,
+      "description1": "≥ 21 Punkte",
+      "description2": "",
+      "description3": ""
     },
     {
       "name": "MINT-EC-SchoolSam",
       "label": "MINT-EC-SchoolSam",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": false
+      "niveau3": false,
+      "description1": "ernsthafte Teilnahme",
+      "description2": "Preisträger*in",
+      "description3": ""
     },
     {
       "name": "MNU-Bundeswettbewerb Physik",
       "label": "MNU-Bundeswettbewerb Physik",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": false
+      "niveau3": false,
+      "description1": "ernsthafte Teilnahme",
+      "description2": "Qualifikation 2. Runde",
+      "description3": ""
     },
     {
       "name": "Pangea",
       "label": "Pangea",
       "note": "",
+      "multipleParticipation": true,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": false
+      "niveau3": false,
+      "description1": "3 x ernsthafte Teilnahme",
+      "description2": "Teilnahme an Zwischenrunde oder Finale",
+      "description3": ""
     },
     {
       "name": "RoboCup",
       "label": "RoboCup",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": true
+      "niveau3": true,
+      "description1": "ernsthafte Teilnahme am Qualifikationsturnier",
+      "description2": "Qualifikation Deutsche Meisterschaft",
+      "description3": "Preisträger*innen Deutsche Meisterschaft"
     },
     {
       "name": "Jugend forscht / Jugend forscht Junior",
       "label": "Jugend forscht",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": true
+      "niveau3": true,
+      "description1": "ernsthafte Teilnahme",
+      "description2": "alle Preisträger*innen beim Regionalwettbewerb (keine Sonderpreise)",
+      "description3": "Qualifikation für den Landes- oder Bundeswettbewerb"
     },
     {
       "name": "World Robot Olympiad",
       "label": "World Robot Olympiad",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": true
+      "niveau3": true,
+      "description1": "ernsthafte Teilnahme am Regionalwettbewerb",
+      "description2": "1. Preis oder 2. Preis, Qualifikation Bundesfinale",
+      "description3": "Preisträger*innen Bundesfinale"
     },
     {
       "name": "Explore Science vor Formel1 in der Schule",
       "label": "Explore Science",
       "note": "",
+      "multipleParticipation": false,
       "niveau1": true,
       "niveau2": true,
-      "niveau3": false
+      "niveau3": false,
+      "description1": "ernsthafte Teilnahme",
+      "description2": "Technischer Preisträger*in",
+      "description3": ""
     }
 
   ]

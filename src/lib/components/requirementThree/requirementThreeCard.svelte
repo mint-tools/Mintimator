@@ -32,7 +32,6 @@
     </Card.Header>
     <Card.Content>
         <ScrollArea class="h-[200px] border rounded-lg p-2">
-            <!--TODO: Add mint ec wettbewerbe to activity list-->
             {#each activityManager.activities as activity, i}
                 <div class="rounded-lg border my-2 p-4 flex items-center justify-between group relative">
                     <div>
