@@ -8,7 +8,7 @@ export const requirementOneSubjectCombination: OptionItem[] = [
     { label: "Ein Leistungskurs, zwei Grundkurse", name: "Ein Leistungskurs und zwei Grundkurse im MINT-Bereich in der Q1 und Q2" },
 ];
 export const scientificWorkOptions: OptionItem[] = [
-    { label: "Facharbeit", name: "Facharbeit in einem MINT-Fach mit mind. 10 Seiten oder" },
+    { label: "Facharbeit", name: "Facharbeit in einem MINT-Fach mit mind. 10 Seiten" },
     { label: "Projektkurs", name: "Projektkurs im MINT-Bereich" },
     { label: "Lernleistung", name: "Besondere Lernleistung im MINT-Bereich" },
     { label: "Wettbewerbsbeitrag", name: "Wettbewerbsbeitrag im Rahmen von „Jugend forscht“" },

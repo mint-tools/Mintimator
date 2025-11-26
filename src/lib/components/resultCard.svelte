@@ -1,6 +1,6 @@
 <script lang="ts">
     import * as Card from "$lib/components/ui/card";
-    import {calculateCertificate} from "$lib/certificateCalculator";
+    import {calculateCertificate} from "$lib/calc/certificateCalculator";
     import * as Data from "$lib/requirementData.svelte";
     import {Button} from "$lib/components/ui/button";
     import UploadButton from "$lib/components/file/uploadButton.svelte";
@@ -8,7 +8,7 @@
 
 </script>
 <div class="lg:grid-cols-2 w-full">
-    <Card.Root class="overflow-hidden rounded-xl border shadow-sm">
+    <Card.Root class="overflow-hidden rounded-lg border shadow-sm">
         <Card.Header class="border-b">
             <div class="flex items-center justify-between space-y-1.5">
                 <Card.Title class="text-base md:text-lg">Zertifikatsergebnis</Card.Title>
@@ -16,8 +16,6 @@
                     <UploadButton class="mx-1"/>
                     <DownloadButton class="mx-1"/>
                 </div>
-
-
             </div>
 
         </Card.Header>

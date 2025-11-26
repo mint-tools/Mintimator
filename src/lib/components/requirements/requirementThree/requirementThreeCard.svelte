@@ -19,7 +19,7 @@
     }
 </script>
 
-<Card.Root class="overflow-hidden rounded-xl border shadow-sm">
+<Card.Root class="overflow-hidden rounded-lg border shadow-sm">
     <Card.Header class="border-b">
         <div class="flex space-between items-center">
             <div class="pr-5">
@@ -33,12 +33,12 @@
     <Card.Content>
         <ScrollArea class="h-[200px] border rounded-lg p-2">
             {#each activityManager.activities as activity, i}
-                <div class="rounded-lg border my-2 p-4 flex items-center justify-between group relative">
+                <div class="rounded-lg border my-2 p-4 flex items-center justify-between relative">
                     <div>
                         <div class="text-sm font-medium">{activity.name}</div>
                     </div>
                     <div class="text-base font-semibold mr-10">{activity.points} P</div>
-                    <Button variant="ghost" class="group-hover:visible not-group-hover:hidden absolute right-2 top-2.5" onclick={() => {
+                    <Button variant="ghost" class="absolute right-2 top-2.5" onclick={() => {
                         activityManager.removeActivity(i);
                     }}>
                         <Trash2 class="size-4"/>

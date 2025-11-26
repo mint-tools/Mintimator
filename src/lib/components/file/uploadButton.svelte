@@ -27,6 +27,8 @@
                 loadRequirements(data);
             } catch (err) {
                 toast.error("Fehler beim einlesen der Datei... Versuche es später erneut");
+            } finally {
+                input.value = "";
             }
         }
     }

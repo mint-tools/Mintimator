@@ -1,4 +1,4 @@
-import {RequirementLevels} from "$lib/requirementLevels";
+import {RequirementLevels} from "$lib/calc/requirementLevels";
 import {
     requirementOneData,
     requirementOneSubjectCombination,
@@ -6,7 +6,7 @@ import {
     activityManagerLevel1,
     activityManagerLevel2,
     scientificWorkOptions
-} from "$lib/requirementData.svelte";
+} from "$lib/requirementData.svelte.js";
 import type {OptionItem} from "$lib/types/optionItem";
 
 export function calculateCertificate(): string {
